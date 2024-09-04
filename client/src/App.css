@@ -1,0 +1,18 @@
+.sizing-content { /* Not suported yet */
+    resize: none;
+    field-sizing: content;
+}
+
+.scroll-darkblue::-webkit-scrollbar {
+    width: 10px;
+}
+
+.scroll-darkblue::-webkit-scrollbar-track {
+    background: #20404D;        /* color of the tracking area */
+}
+
+.scroll-darkblue::-webkit-scrollbar-thumb {
+    background-color: #93B5C3;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    cursor: default;  /* creates padding around scroll thumb */
+}
