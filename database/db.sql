@@ -1,5 +1,5 @@
 -- Table task
-CREATE TABLE tasks (
+CREATE TABLE IF NOT EXISTS tasks (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(120) NOT NULL,
     description VARCHAR(2000),
