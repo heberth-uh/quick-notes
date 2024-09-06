@@ -1,3 +1,4 @@
+export const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:5173';
 export const PORT = process.env.PORT || 4000;
 // Database
 export const DB_HOST = process.env.DB_HOST || 'localhost';

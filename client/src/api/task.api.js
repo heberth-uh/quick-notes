@@ -1,7 +1,6 @@
 import axios from 'axios'
-import { PORT } from '../../../server/config';
 
-const domain = `http://localhost:${PORT}`;
+const domain = import.meta.env.VITE_BACKEND_URL || `http://localhost:4000`
 
 export const getTasksRequest = async () =>
     await axios.get(`${domain}/tasks`)
