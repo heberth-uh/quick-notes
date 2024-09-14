@@ -19,5 +19,11 @@ app.use(taskRoutes);
 // Distribución de archivos estáticos (client built)
 app.use(express.static(join(__dirname, '../client/dist')))
 
+// The "catch-all" handler: for any request that doesn't
+// match one above, send back React's index.html file.
+app.get('*', (req, res) => {
+    res.sendFile(join(__dirname, '../client/dist/index.html'));
+});
+
 app.listen(PORT);
 console.log(`Server running on port ${PORT}`);
