@@ -13,6 +13,11 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 app.use(cors());
 app.use(express.json());
 
+//healthcheck
+app.get('/health', (req, res) => {
+    res.status(200).send('OK');
+});
+
 app.use(routes);
 app.use(taskRoutes);
 
