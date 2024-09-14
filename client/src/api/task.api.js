@@ -2,8 +2,6 @@ import axios from 'axios'
 
 const domain = import.meta.env.VITE_BACKEND_URL || `http://localhost:4000`
 
-console.log('Task API: ', domain)
-
 export const getTasksRequest = async () =>
     await axios.get(`${domain}/tasks`)
 

@@ -1,7 +1,7 @@
 {
-  "name": "todo-mern-mysql",
+  "name": "quick-task",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple website to create and manage your tasks",
   "main": "index.js",
   "type": "module",
   "scripts": {
