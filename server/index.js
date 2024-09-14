@@ -30,5 +30,11 @@ app.get('*', (req, res) => {
     res.sendFile(join(__dirname, '../client/dist/index.html'));
 });
 
+// Manejo de señales
+process.on('SIGTERM', () => {
+    console.log('SIGTERM signal received: closing HTTP server');
+    process.exit(0);
+});
+
 app.listen(PORT);
 console.log(`Server running on port ${PORT}`);
