@@ -78,7 +78,6 @@ export default function TaskForm() {
                             navigate(`/task/${params.id}`)
                         } else {
                             const response = await createTask(values);
-                            console.log('response: ', response)
                             actions.resetForm();
                             navigate(`/task/${response.id}`)
                         }
