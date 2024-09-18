@@ -67,24 +67,26 @@ export default function TaskPage() {
         return (
             <>
                 <Navbar />
-                <div className='mb-16'>
-                    <div className="flex items-center gap-4 mb-8">
-                        <a className={`${task.done ? 'text-secondary hover:text-cyan-400' : 'text-gray hover:text-light/50'} text-4xl select-none cursor-pointer`}
+                <div className='mt-2 mb-16'>
+                    <div className="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
+                        <a className={`${task.done ? 'text-secondary hover:text-cyan-400' : 'text-gray hover:text-light/50'} select-none cursor-pointer`}
                             title={task.done ? 'Set as pending' : 'Set as done'}
                             onClick={() => handleToggleDone(params.id, task.done)} >
-                            <span>{task.done ? <FaCircleCheck /> : <FaRegCircle />}</span>
+                            <span className='text-2xl md:text-4xl'>
+                                {task.done ? <FaCircleCheck /> : <FaRegCircle />}
+                            </span>
                         </a>
-                        <h2 className='text-light text-left font-semibold text-2xl'>{task.title}</h2>
+                        <h2 className='text-light text-left font-medium md:font-semibold text-lg md:text-2xl'>{task.title}</h2>
                     </div>
-                    <p className='text-light text-lg whitespace-pre-line mb-10'>{task.description}</p>
+                    <p className='text-light text-base md:text-lg whitespace-pre-line mb-8 md:mb-10'>{task.description}</p>
                     <div className='mb-10'>
                         <p className={`${task.done ? 'text-secondary' : 'text-warning'} flex items-center gap-2 mb-2`}>
-                            <span className='text-md mt-[0.08rem]'>
+                            <span className='mt-[0.08rem]'>
                                 {task.done ? <FaRegCheckCircle /> : <FaRegClock />}
                             </span>
                             {task.done ? 'Done' : 'Pending'}
                         </p>
-                        <p className='text-light'>{
+                        <p className='text-light text-sm md:text-base'>{
                             task.create_date
                         }</p>
                     </div>

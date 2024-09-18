@@ -24,8 +24,8 @@ export default function TaskPages() {
     return (
         <>
             <Navbar />
-            <section className="text-center mb-16">
-                <h1 className="text-light text-left font-semibold text-xl md:text-2xl mb-8">My tasks</h1>
+            <section className="text-center mt-2 mb-16">
+                <h1 className="text-light text-left font-medium md:font-semibold text-lg md:text-2xl mb-4">My tasks</h1>
                 <div>{renderContent()}</div>
             </section>
         </>
