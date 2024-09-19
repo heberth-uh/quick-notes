@@ -18,8 +18,8 @@ function Navbar() {
                     </li>
                     <li>
                         <Link to={'/new'}
-                        className='bg-gray text-light hover:bg-cyan-900 border-2 md:border-[3px] border-gray hover:border-cyan-900 px-4 py-[2px] md:px-6 md:py-2 rounded-xl md:rounded-2xl font-semibold outline-none focus:border-[3px] focus:border-cyan-800'>
-                            <span className="font-semibold text-normal md:text-xl">
+                        className='bg-gray text-light hover:bg-cyan-900 border-2 md:border-[3px] border-gray hover:border-cyan-900 px-4 py-[2px] pb-1 md:px-6 md:py-2 rounded-xl md:rounded-2xl font-semibold outline-none focus:border-[3px] focus:border-cyan-800'>
+                            <span className="font-semibold md:text-xl">
                                 New Task
                             </span>
                         </Link>

@@ -68,7 +68,8 @@ export default function TaskForm() {
         return (
             <>
                 <Navbar />
-                <h1 className='text-light text-left font-semibold text-2xl mb-8'>{params.id ? 'Edit task' : 'New task'}</h1>
+                <h1 className='text-light text-left font-medium md:font-semibold text-lg md:text-2xl mt-2 mb-4'>{params.id ? 'Edit task' : 'New task'}</h1>
+
                 <Formik
                     initialValues={task}
                     enableReinitialize
@@ -115,12 +116,12 @@ export default function TaskForm() {
                                     onFocus={ () => setTitleFocused(true)}
                                     onBlur={ () => setTitleFocused(false)}
                                     value={values.title}
-                                    className={`bg-dark text-light py-2 px-3 text-lg border-gray border-[3px] rounded-xl w-full focus:outline-none focus:border-light/30 placeholder:text-light/30 ${values.title.length > titleMaxLength ? 'border-amber-400/50 focus:border-amber-400/50' : ''}`}
+                                    className={`bg-dark text-light px-3 py-2 md:py-2 md:px-3 text-base md:text-lg border-gray border-2 md:border-[3px] rounded-lg md:rounded-xl w-full focus:outline-none focus:border-light/30 placeholder:text-light/30 ${values.title.length > titleMaxLength ? 'border-amber-400/50 focus:border-amber-400/50' : ''}`}
                                 />
-                                <div className={`absolute left-0 -bottom-7 ${values.title.length > titleMaxLength ? 'text-amber-400/80' : 'text-red-400'} ${shake ? 'animate-shake' : ''}`}>
+                                <div className={`absolute left-0 -bottom-7 text-sm md:text-base ${values.title.length > titleMaxLength ? 'text-amber-400/80' : 'text-red-400'} ${shake ? 'animate-shake' : ''}`}>
                                     {errors.title && touched.title && errors.title}
                                 </div>
-                                <div className={`absolute right-0 -bottom-7 ${titleFocused ? 'block' : 'hidden'} ${values.title.length > titleMaxLength ? 'text-amber-400/80' : 'text-light'} ${shake ? 'animate-shake' : ''}`}>
+                                <div className={`absolute right-0 -bottom-7 text-sm md:text-base ${titleFocused ? 'block' : 'hidden'} ${values.title.length > titleMaxLength ? 'text-amber-400/80' : 'text-light'} ${shake ? 'animate-shake' : ''}`}>
                                     {titleMaxLength - values.title.length}
                                 </div>
                             </div>
@@ -140,25 +141,25 @@ export default function TaskForm() {
                                     onFocus={ () => setDescriptionFocused(true)}
                                     onBlur={ () => setDescriptionFocused(false)}
                                     value={values.description}
-                                    className={`bg-dark text-light py-2 px-3 text-lg border-gray border-[3px] rounded-xl w-full min-h-36 max-h-[40vh] focus:outline-none focus:border-light/30 placeholder:text-light/30 scroll-darkblue ${values.description.length > descritpionMaxLength ? 'border-amber-400/50  focus:border-amber-400/50' : ''}`}
+                                    className={`bg-dark text-light px-3 py-2 md:py-2 md:px-3 text-base md:text-lg border-gray border-2 md:border-[3px] rounded-lg md:rounded-xl w-full min-h-36 max-h-[40vh] focus:outline-none focus:border-light/30 placeholder:text-light/30 scroll-darkblue ${values.description.length > descritpionMaxLength ? 'border-amber-400/50  focus:border-amber-400/50' : ''}`}
                                 />
-                                <div className={`absolute left-0 -bottom-6 ${values.description.length > descritpionMaxLength ? 'text-amber-400/80' : 'text-red-400'} ${shake ? 'animate-shake' : ''}`}>
+                                <div className={`absolute left-0 -bottom-6 text-sm md:text-base ${values.description.length > descritpionMaxLength ? 'text-amber-400/80' : 'text-red-400'} ${shake ? 'animate-shake' : ''}`}>
                                     {errors.description && touched.description && errors.description}
                                 </div>
-                                <div className={`absolute right-0 -bottom-6 ${descriptionFocused ? 'block' : 'hidden'} ${values.description.length > descritpionMaxLength ? 'text-amber-400/80' : 'text-light'}`}>
+                                <div className={`absolute right-0 -bottom-6 text-sm md:text-base ${descriptionFocused ? 'block' : 'hidden'} ${values.description.length > descritpionMaxLength ? 'text-amber-400/80' : 'text-light'}`}>
                                     {descritpionMaxLength - values.description.length}
                                 </div>
                             </div>
-                            <div className="flex flex-row-reverse items-center justify-start gap-4 my-16">
+                            <div className="flex flex-row-reverse items-center justify-start gap-4 md:my-16">
                                 <button
-                                    className="bg-secondary text-primary hover:bg-cyan-400 border-[3px] border-secondary hover:border-cyan-400 px-6 py-2 rounded-2xl font-semibold text-xl outline-none focus:border-[3px] focus:border-cyan-300"
+                                    className="bg-secondary text-primary hover:bg-cyan-400 border-2 md:border-[3px] border-secondary hover:border-cyan-400 px-4 py-[2px] pb-1 md:px-6 md:py-2 rounded-xl md:rounded-2xl font-semibold text-base md:text-xl outline-none focus:border-[3px] focus:border-cyan-300"
                                     type="submit"
                                     onClick={() => handleValidateForm(errors)}
                                     disabled={isSubmitting}>
                                     Save
                                 </button>
                                 <button
-                                    className='bg-gray text-light hover:bg-cyan-900 border-[3px] border-gray hover:border-cyan-900 px-6 py-2 rounded-2xl font-semibold text-xl outline-none focus:border-[3px] focus:border-cyan-800'
+                                    className='bg-gray text-light hover:bg-cyan-900 border-2 md:border-[3px] border-gray hover:border-cyan-900 px-4 py-[2px] pb-1 md:px-6 md:py-2 rounded-xl md:rounded-2xl font-semibold text-base md:text-xl outline-none focus:border-[3px] focus:border-cyan-800'
                                     type="reset"
                                     onClick={() => handleCancel()}>
                                     Cancel

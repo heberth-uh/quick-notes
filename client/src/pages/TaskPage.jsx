@@ -92,38 +92,38 @@ export default function TaskPage() {
                     </div>
                     <div className="flex flex-row-reverse justify-start gap-4">
                         <button
-                            className="bg-secondary text-primary hover:bg-cyan-400 border-[3px] border-secondary hover:border-cyan-400 px-6 py-2 rounded-2xl font-semibold text-xl outline-none focus:border-[3px] focus:border-cyan-300"
+                            className="bg-secondary text-primary hover:bg-cyan-400 border-2 md:border-[3px] border-secondary hover:border-cyan-400 px-4 py-[2px] pb-1 md:px-6 md:py-2 rounded-xl md:rounded-2xl outline-none focus:border-[3px] focus:border-cyan-300"
                             onClick={() => navigate(`/edit/${params.id}`)}>
-                            <span className="font-semibold text-xl">
+                            <span className="font-semibold text-base md:text-xl">
                                 Edit
                             </span>
                         </button>
                         <button
-                            className="bg-red-400 text-primary hover:bg-red-500 border-[3px] border-red-400 hover:border-red-500 px-6 py-2 rounded-2xl font-semibold text-xl outline-none focus:border-[3px] focus:border-red-300"
+                            className="bg-red-400 text-primary hover:bg-red-500 border-2 md:border-[3px] border-red-400 hover:border-red-500 px-4 pb-1 py-[2px] md:px-6 md:py-2 rounded-xl md:rounded-2xl outline-none focus:border-[3px] focus:border-red-300"
                             onClick={() => toggleDialog()}>
-                            <span className="font-semibold text-xl">
+                            <p className="font-semibold text-base md:text-xl">
                                 Delete
-                            </span>
+                            </p>
                         </button>
                     </div>
                 </div>
 
-                {/* Fonfirmation dialog */}  
+                {/* Confirmation dialog */}  
                 <dialog ref={confirmRef}
                 className='bg-dark border-[3px] border-gray rounded-xl'
                 onClick={(e) => handleClickDialog(e)}>
                     <div className='w-full h-full py-4 px-10'>
-                        <div className="content text-center text-light mb-4 text-lg">
+                        <div className="text-center text-light mb-4 text-base md:text-lg">
                             Are you sure you want to delete this task?
                         </div>
                         <div className='flex justify-center items-center gap-2'>
                             <button
-                            className='bg-gray text-light hover:bg-cyan-900 border-[3px] border-gray hover:border-cyan-900 px-6 py-2 rounded-2xl font-semibold text-xl outline-none focus:border-[3px] focus:border-cyan-800'
+                            className='bg-gray text-light hover:bg-cyan-900 border-2 md:border-[3px] border-gray hover:border-cyan-900 px-4 py-[2px] pb-1 md:px-6 md:py-2 rounded-xl md:rounded-2xl font-semibold text-base md:text-xl outline-none focus:border-[3px] focus:border-cyan-800'
                             onClick={() => toggleDialog()}>
                                 Cancel
                             </button>
                             <button
-                            className="bg-secondary text-primary hover:bg-cyan-400 border-[3px] border-secondary hover:border-cyan-400 px-6 py-2 rounded-2xl font-semibold text-xl outline-none focus:border-[3px] focus:border-cyan-300"
+                            className="bg-secondary text-primary hover:bg-cyan-400 border-2 md:border-[3px] border-secondary hover:border-cyan-400 px-4 py-[2px] pb-1 md:px-6 md:py-2 rounded-xl md:rounded-2xl font-semibold text-base md:text-xl outline-none focus:border-[3px] focus:border-cyan-300"
                             onClick={() => handleDeleteTask()}>
                                 Confirmar
                             </button>
