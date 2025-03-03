@@ -1,4 +1,4 @@
-# # QuickNotes (To-Do List App) 📝
+# QuickNotes (To-Do List App) 📝
 
 A simple to-do list website built using the MERN stack with MySQL (MySQL, Express.js, React, Node). It allows users to create, delete and update your tasks or notes.
 
